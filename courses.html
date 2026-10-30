@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | LMS Platform</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fa;
+        }
+
+        .lms-navbar,
+        footer {
+            background-color: #4873f5;
+            color: white;
+        }
+
+        .lms-navbar .navbar-brand,
+        .lms-navbar .nav-link {
+            color: white;
+        }
+
+        .lms-navbar .nav-link:hover,
+        .lms-navbar .nav-link.active {
+            color: #e2e8ff;
+        }
+
+        .page-heading {
+            text-align: center;
+            padding: 45px 20px;
+            background-color: #eef1f5;
+        }
+
+        .page-heading p {
+            color: #737b85;
+            margin-bottom: 0;
+        }
+
+        .courses-section {
+            flex: 1;
+            width: 100%;
+            padding: 45px 0 60px;
+        }
+
+        .course-card {
+            height: 100%;
+            background: white;
+            border: 1px solid #e0e3e8;
+            border-radius: 7px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            background-color: #d3d6db;
+        }
+
+        .course-content {
+            padding: 22px;
+        }
+
+        .course-content h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #202938;
+        }
+
+        .course-content p {
+            color: #737b85;
+            line-height: 1.7;
+            min-height: 55px;
+        }
+
+        .btn-blue {
+            display: inline-block;
+            background-color: #4873f5;
+            color: white;
+            text-decoration: none;
+            padding: 9px 15px;
+            border-radius: 4px;
+        }
+
+        .btn-blue:hover {
+            background-color: #3156c9;
+            color: white;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .page-heading {
+                padding: 35px 15px;
+            }
+
+            .courses-section {
+                padding: 30px 0 40px;
+            }
+
+            .course-image {
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg lms-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">LMS</a>
+
+            <button class="navbar-toggler bg-light"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainMenu"
+                    aria-controls="mainMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+        <div class="container">
+            <h1 class="fw-semibold mb-3">Our Courses</h1>
+            <p>Explore our courses and start your learning journey today.</p>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <main class="courses-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Programming -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <img
+                            class="course-image"
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                            alt="Student learning programming">
+
+                        <div class="course-content">
+                            <h3>Programming Basics</h3>
+                            <p>
+                                Learn programming fundamentals, problem-solving,
+                                and how to build your first applications.
+                            </p>
+                                       
+                <button type="button" class="btn-blue view-details"
+                        data-title="Programming Basics"
+                        data-description="Learn Python programming from scratch.">
+                    View Details
+                </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <img
+                            class="course-image"
+                            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+                            alt="Artificial intelligence concept">
+
+                        <div class="course-content">
+                            <h3>AI Fundamentals</h3>
+                            <p>
+                                Discover artificial intelligence, machine
+                                learning, and the future of intelligent systems.
+                            </p>
+                                                      
+            <button type="button" class="btn-blue view-details"
+                    data-title="AI Fundamentals"
+                    data-description="Discover Artificial Intelligence and machine learning basics.">
+                View Details
+            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI Design -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <img
+                            class="course-image"
+                            src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80"
+                            alt="UI and graphic design workspace">
+
+                        <div class="course-content">
+                            <h3>UI Design</h3>
+                            <p>
+                                Learn to design attractive, accessible,
+                                and user-friendly digital interfaces.
+                            </p>
+                            
+                        <button type="button" class="btn-blue view-details"
+                                data-title="UI Design"
+                                data-description="Learn to create beautiful and user-friendly interfaces.">
+                            View Details
+                        </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <!-- Course Details Modal -->
+    <div class="modal fade" id="courseModal" tabindex="-1"
+        aria-labelledby="courseModalTitle" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseModalTitle">
+                        Programming Basics
+                    </h5>
+    
+              
+                </div>
+
+                <div class="modal-body" id="courseModalBody">
+                    Learn Python programming from scratch.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm"
+                            data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 LMS Platform. All Rights Reserved.
+    </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const modalElement = document.getElementById("courseModal");
+
+        if (!modalElement) {
+            console.error("Course modal not found!");
+            return;
+        }
+
+        const modal = new bootstrap.Modal(modalElement);
+
+        document.querySelectorAll(".view-details").forEach(function (button) {
+            button.addEventListener("click", function () {
+
+                const title = button.dataset.title;
+                const description = button.dataset.description;
+
+                document.getElementById("courseModalTitle").textContent = title;
+                document.getElementById("courseModalBody").textContent = description;
+
+                modal.show();
+            });
+        });
+
+    });
+    </script>
+
+</body>
+</html>
+
+
+      
